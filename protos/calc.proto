@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package example;
+
+service Calc {
+  rpc Plus (Input) returns (Output) {}
+}
+
+// クライアントから渡す計算式です。
+message Input {
+  int32 fact1 = 1;
+  int32 fact2 = 2;
+}
+
+// サーバー側が返す答えです。
+message Output {
+  int32 answer = 1;
+}
